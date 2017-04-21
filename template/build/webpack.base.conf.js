@@ -9,7 +9,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: {{#ts}}'./src/main.ts'{{else}}'./src/main.js'{{/ts}}
   },
   output: {
     path: config.build.assetsRoot,
@@ -19,7 +19,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json'{{#ts}}, '.ts'{{/ts}}],
     alias: {
       {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
@@ -29,6 +29,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {{#ts}}
+      {
+        test: /\.ts$/,
+        exclude: /node_modules|vue\/src/,
+        loader: 'ts-loader',
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
+      },
+      {{/ts}}
       {{#lint}}
       {
         test: /\.(js|vue)$/,

@@ -77,6 +77,10 @@ module.exports = {
     "e2e": {
       "type": "confirm",
       "message": "Setup e2e tests with Nightwatch?"
+    },
+    "ts":{
+      "type":"confirm",
+      "message":  "Use typescript?"
     }
   },
   "filters": {
@@ -86,7 +90,11 @@ module.exports = {
     "test/unit/**/*": "unit",
     "build/webpack.test.conf.js": "unit",
     "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
+    "src/router/**/*": "router",
+    "sfc.d.ts": "ts",
+    "tsconfig.json": "ts",
+    "src/main.ts":"ts",
+    "src/mail.js":"!ts"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };

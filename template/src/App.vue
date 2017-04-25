@@ -15,18 +15,18 @@
 import Hello from './components/Hello{{#ts}}.vue{{/ts}}'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#ts}}
 import Vue from 'vue'
-import {Component} from 'vue-property-decorator'
+import { Component } from 'vue-property-decorator'
 
 {{/ts}}
 {{/unless}}
 {{#ts}}@Component({
-  components:{Hello}
+  components: { Hello }
 }){{/ts}}
-export default {{#ts}}class App extends Vue{{/ts}}{
+export default{{#ts}} class App extends Vue{{/ts}} {
 {{#ts}}
-  ts:string='typescript'
+  ts:string= 'typescript'
 
-  get msg():string{
+  get msg ():string {
     return `compiled with ${this.ts}`
   }
 {{else}}
@@ -36,7 +36,6 @@ export default {{#ts}}class App extends Vue{{/ts}}{
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/ts}}
-}
 </script>
 
 <style>

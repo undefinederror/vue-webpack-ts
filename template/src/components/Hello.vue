@@ -17,6 +17,14 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    {{#ts}}
+    <h2>Typescript related links</h2>
+    <ul>
+      <li><a href="https://vuejs.org/v2/guide/typescript.html#ad" target="_blank">typescript support</a></li>
+      <li><a href="https://github.com/vuejs/vue-class-component#vue-class-component" target="_blank">vue-class-component</a></li>
+      <li><a href="https://github.com/kaorun343/vue-property-decorator" target="_blank">vue-property-decorator</a></li>
+    </ul>
+    {{/ts}}
   </div>
 </template>
 

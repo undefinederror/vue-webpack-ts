@@ -29,6 +29,7 @@ export default{{#ts}} class App extends Vue{{/ts}} {
   get msg ():string {
     return `compiled with ${this.ts}`
   }
+}
 {{else}}
   name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
   components: {

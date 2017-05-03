@@ -5,7 +5,7 @@
 This is a fork of the official [vuejs webpack template](https://github.com/vuejs-templates/webpack) with added typescript support.
 
 ```bash
-vue init undefinederror/vue-webpack-ts <myproject>
+vue init undefinederror/vue-webpack-ts#ts <myproject>
 ```
 Just answer "Y" at the the question "Use typescript?"
 
